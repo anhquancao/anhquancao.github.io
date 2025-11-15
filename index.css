@@ -1,5 +1,7 @@
 body {
     font-family: "Noto Sans", sans-serif;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+    min-height: 100vh;
 }
 .title {
     font-family: "Noto Sans", sans-serif;
@@ -8,10 +10,17 @@ body {
 .portrait {
     border-radius: 50%;
     overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portrait:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
 }
 .portrait img {
     /* transform: scale(1.06); */
     transform: scale(1.09);
+    transition: transform 0.3s ease;
 }
 .footer .footer-links a {
     font-size: 25px;
@@ -22,9 +31,14 @@ body {
     margin: 0 0 0.25em 0 !important;
     font-weight: 600;
     font-size: 110% !important;
+    transition: color 0.2s ease;
 }
 .publication-block .publication-title a {
     color: #000;
+    transition: color 0.2s ease;
+}
+.publication-block .publication-title a:hover {
+    color: #3273dc;
 }
 .publication-block .publication-venue {
     color: #555;
@@ -54,14 +68,24 @@ body {
     text-decoration: underline;
 }
 .publication-block .publication-image {
-    border-radius: 2%;
+    border-radius: 8px;
     width: 100%;
     height: 100%;
     overflow: hidden;
     font-size: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.publication-block .publication-image:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 .publication-block .publication-image img {
     width: 100%;
+    transition: transform 0.3s ease;
+}
+.publication-block .publication-image:hover img {
+    transform: scale(1.05);
 }
 .publication-block .publication-mousecell {
     position: relative;
@@ -95,7 +119,7 @@ body {
 }
 
 .news-item {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .footer {
@@ -104,4 +128,172 @@ body {
 
 a.external-link {
     margin-right: 0.5rem !important;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+}
+a.external-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styling */
+.section {
+    background: transparent;
+}
+
+/* Title enhancements */
+.title.is-3 {
+    position: relative;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem !important;
+}
+.title.is-3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #3273dc 0%, #209cee 100%);
+    border-radius: 2px;
+}
+
+/* News items enhancement */
+.news-item {
+    padding: 0.25rem 0;
+    transition: padding-left 0.2s ease;
+}
+.news-item:hover {
+    padding-left: 0.5rem;
+}
+.news-item .tag {
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Publication block enhancement */
+.publication-block {
+    padding: 0.75rem 0;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
+}
+.publication-block:hover {
+    background-color: rgba(50, 115, 220, 0.02);
+}
+
+/* Button enhancements */
+.button {
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.button.is-link {
+    background-color: #3273dc;
+}
+.button.is-link:hover {
+    background-color: #2366d1;
+    transform: translateY(-1px);
+}
+
+/* Hero section */
+.hero-body {
+    padding: 3rem 1.5rem;
+}
+
+/* Footer enhancement */
+.footer {
+    background: linear-gradient(to top, #f8f9fa 0%, #ffffff 100%);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Academic services list styling */
+.content ul {
+    list-style: none;
+    padding-left: 0;
+}
+.content ul li {
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.content ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #3273dc;
+    font-weight: bold;
+}
+
+/* Main title enhancement */
+h1.title {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #3273dc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Link hover effects */
+a {
+    transition: color 0.2s ease;
+}
+
+/* Publication venue badges */
+.publication-venue {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Award highlights */
+.has-text-danger {
+    background: linear-gradient(135deg, #ff3860 0%, #ff1744 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* Show more button enhancement */
+.show-more-btn {
+    background: linear-gradient(135deg, #3273dc 0%, #209cee 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.show-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(50, 115, 220, 0.3);
+}
+
+/* Container max width adjustment for better spacing */
+.container.is-max-desktop {
+    max-width: 960px;
+}
+
+/* Improved spacing between sections */
+.section {
+    padding: 2rem 1.5rem;
+}
+
+/* Tag enhancements */
+.tag.is-info {
+    background: linear-gradient(135deg, #3273dc 0%, #209cee 100%);
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+/* Publication description styling */
+.publication-description {
+    line-height: 1.6;
+    color: #4a4a4a;
 }
