@@ -96,12 +96,15 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.publication-block .publication-image img {
+.publication-block .publication-image img,
+.publication-block .publication-image video {
     width: 100%;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.publication-block .publication-image:hover img {
+.publication-block .publication-image:hover img,
+.publication-block .publication-image:hover video {
     transform: scale(1.05);
 }
 

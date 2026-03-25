@@ -116,7 +116,7 @@
         <div class="column">
           <div class="content">
             <div class="news-item"><span class="tag is-info">02/2026</span> <b><a href="#stablemtl">StableMTL</a>, <a
-                  href="#occany">OccAny</a>, <a href="#drivor">DrivOR</a></b> are
+                  href="https://arxiv.org/abs/2603.23502">OccAny</a>, <a href="#drivor">DrivOR</a></b> are
               accepted at CVPR 2026.</div>
             <div class="news-item"><span class="tag is-info">11/2025</span> <b><a
                   href='https://neurips.cc/Conferences/2025/ProgramCommittee#top-reviewer'>Top reviewer</a></b> at
@@ -164,8 +164,9 @@
 
         <div class="column is-3">
           <div class="publication-image ">
-
-            <img alt="OccAny teaser" src="media/occany.png">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="OccAny teaser video">
+              <source src="media/teaser_occany.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
 
@@ -181,7 +182,7 @@
                 Anh-Quan Cao,
               </span>
               <span class="author-block ">
-                Tuan-Hung VU
+                Tuan-Hung Vu
               </span>
             </div>
 
@@ -190,10 +191,27 @@
             </div>
 
             <p class="publication-description mb-0">
-              <!-- Relying on in-domain annotations and precise sensor-rig priors, existing 3D occupancy prediction methods are limited in both scalability and out-of-domain generalization. While recent visual geometry foundation models exhibit strong generalization capabilities, they were mainly designed for general purposes and lack one or more key ingredients required for urban occupancy prediction, namely metric prediction, geometry completion in cluttered scenes and adaptation to urban scenarios. We address this gap and present OccAny, the first unconstrained urban 3D occupancy model capable of operating on out-of-domain uncalibrated scenes to predict and complete metric occupancy coupled with segmentation features. OccAny is versatile and can predict occupancy from sequential, monocular, or surround-view images. Our contributions are three-fold: (i) we propose the first generalized 3D occupancy framework with (ii) Segmentation Forcing that improves occupancy quality while enabling mask-level prediction, and (iii) a Novel View Rendering pipeline that infers novel-view geometry to enable test-time view augmentation for geometry completion. Extensive experiments demonstrate that OccAny outperforms all visual geometry baselines on 3D occupancy prediction task, while remaining competitive with in-domain self-supervised methods across three input settings on two established urban occupancy prediction datasets. -->
+              <strong>TL;DR:</strong> A generalized urban 3D occupancy model that works on uncalibrated,
+              out-of-domain scenes and predicts metric occupancy from monocular, sequential, or surround-view inputs.
             </p>
 
             <div class="publication-links field has-addons">
+
+              <a class="external-link button is-link is-light" href="https://valeoai.github.io/OccAny/">
+                <span class="icon"><i class="fas fa-globe-asia"></i></span>
+                <span>Project Page</span>
+              </a>
+
+              <a class="external-link button is-link is-light" href="https://arxiv.org/abs/2603.23502">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+
+              <a class="external-link button is-link is-light" href="https://github.com/valeoai/OccAny">
+                <span class="icon"><i class="fa fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+
             </div>
 
           </div>
@@ -234,7 +252,8 @@
             </div>
 
             <p class="publication-description mb-0">
-              <!-- We present DrivoR, a simple and efficient transformer-based architecture for end-to-end autonomous driving. Our approach builds on pretrained Vision Transformers (ViTs) and introduces camera-aware register tokens that compress multi-camera features into a compact scene representation, significantly reducing downstream computation without sacrificing accuracy. These tokens drive two lightweight transformer decoders that generate and then score candidate trajectories. The scoring decoder learns to mimic an oracle and predicts interpretable sub-scores representing aspects such as safety, comfort, and efficiency, enabling behavior-conditioned driving at inference. Despite its minimal design, DrivoR outperforms or matches strong contemporary baselines across NAVSIM-v1, NAVSIM-v2, and the photorealistic closed-loop HUGSIM benchmark. Our results show that a pure-transformer architecture, combined with targeted token compression, is sufficient for accurate, efficient, and adaptive end-to-end driving. -->
+              <strong>TL;DR:</strong> A lightweight transformer for end-to-end driving that compresses multi-camera
+              features with register tokens and improves efficiency without sacrificing trajectory quality.
             </p>
 
             <div class="publication-links field has-addons">
@@ -286,7 +305,8 @@
             </div>
 
             <p class="publication-description mb-0">
-              <!-- StableMTL description -->
+              <strong>TL;DR:</strong> Reuses latent diffusion priors for multi-task learning on partially annotated
+              synthetic data, improving label efficiency and task performance.
             </p>
 
             <div class="publication-links field has-addons">
@@ -335,7 +355,9 @@
             </div>
 
             <p class="publication-description mb-0">
-              <!-- LatteCLIP is an unsupervised method to fine-tune CLIP models for specific domains without human labels. It uses Large Multimodal Models (LMMs) to generate image descriptions and a novel distillation strategy to overcome the inaccuracies of the generated descriptions. -->
+              <strong>TL;DR:</strong> Unsupervised CLIP adaptation using LMM-generated captions and distillation,
+              enabling domain-specific improvements without manual labels.
+            </p>
             <div class="publication-links field has-addons">
               <a class="external-link button is-link is-light" href="https://arxiv.org/abs/2410.08211">
                 <span class="icon"><i class="ai ai-arxiv"></i></span>
@@ -380,7 +402,8 @@
               <span>CVPR 2024</span> <span class="has-text-danger">(Oral, Best Paper Award Candidate)</span>
             </div>
             <p class="publication-description mb-0">
-              <!-- PaSCo introduces Panoptic Scene Completion (PSC), adding instance details to Semantic Scene Completion (SSC). It uses a hybrid mask-based CNN-transformer and MIMO-based ensembling for voxel and instance uncertainty estimation.  -->
+              <strong>TL;DR:</strong> Introduces urban panoptic scene completion with uncertainty awareness, jointly
+              predicting semantic voxels and object instances in 3D.
             </p>
 
             <div class="publication-links field has-addons">
@@ -435,7 +458,8 @@
             </div>
 
             <p class="publication-description mb-0">
-              <!-- SceneRF is a self-supervised 3D reconstruction method using NeRF and monocular image sequences. It improves geometry with new constraints and a novel sampling strategy, fusing depth views from a spherical decoder for a wider field of view. -->
+              <strong>TL;DR:</strong> Self-supervised monocular 3D reconstruction with radiance fields that improves
+              geometry quality and widens reconstructed scene coverage.
             </p>
 
             <div class="publication-links field has-addons">
@@ -494,7 +518,9 @@
             </div>
 
             <p class="publication-description mb-0">
-              <!-- COARSE3D is an architecture-agnostic contrastive learning method for 3D segmentation requiring minimal annotations. It proposes a prototype memory bank and entropy-driven sampling to achieve state-of-the-art results on outdoor datasets with minimal annotations (down to 0.001%). -->
+              <strong>TL;DR:</strong> Weakly supervised 3D point cloud segmentation with class prototypes and
+              contrastive learning, achieving strong results with extremely sparse labels.
+            </p>
             <div class="publication-links field has-addons">
               <a class="external-link button is-link is-light" href="https://arxiv.org/abs/2210.01784">
                 <span class="icon"><i class="ai ai-arxiv"></i></span>
@@ -542,7 +568,9 @@
             </div>
 
             <p class="publication-description mb-0">
-              <!-- MonoScene infers 3D geometry and semantics from a single RGB image. It combines 2D and 3D UNets with a novel 2D-to-3D feature projection and a 3D context prior for spatio-semantic consistency. New global scene and local frustum losses enhance performance, achieving state-of-the-art results while hallucinating plausible scenes beyond the camera’s view. -->
+              <strong>TL;DR:</strong> Monocular semantic scene completion that lifts 2D image features into 3D and
+              predicts full-scene geometry and semantics beyond the camera field of view.
+            </p>
             <div class="publication-links field has-addons">
               <a class="external-link button is-link is-light" href="https://astra-vision.github.io/MonoScene/">
                 <span class="icon"><i class="fas fa-globe-asia"></i></span>
@@ -592,8 +620,8 @@
               <span>ICCV 2021</span>
             </div>
             <p class="publication-description mb-0">
-              <!-- PCAM is a deep learning method for rigid point cloud registration with partial overlaps, jointly solving correspondence finding and filtering. It leverages a pointwise product of cross-attention matrices to integrate geometric and contextual information, enhancing feature matching in overlapping regions. -->
-
+              <strong>TL;DR:</strong> Rigid point cloud registration via products of cross-attention matrices,
+              improving correspondence quality under partial overlap.
             </p>
 
             <div class="publication-links field has-addons">
