@@ -891,6 +891,32 @@
           link.setAttribute('rel', 'noopener noreferrer');
         }
       });
+
+      // Fetch GitHub stars
+      const starLinks = document.querySelectorAll('.has-star');
+      starLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href.includes('github.com')) {
+          const parts = href.split('github.com/')[1].split('/');
+          if (parts.length >= 2) {
+            const repoPath = parts[0] + '/' + parts[1];
+            fetch(`https://api.github.com/repos/${repoPath}`)
+              .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+              })
+              .then(data => {
+                if (data.stargazers_count !== undefined) {
+                  const starCountSpan = link.querySelector('.star-count span:last-child');
+                  if (starCountSpan) {
+                    starCountSpan.textContent = data.stargazers_count;
+                  }
+                }
+              })
+              .catch(error => console.error(`Error fetching stars for ${repoPath}:`, error));
+          }
+        }
+      });
     });
   </script>
 </body>
